@@ -157,5 +157,16 @@ button[role="tab"][aria-selected="true"] div,
     background-color: rgba(255,255,255,0.15) !important;
     background: rgba(255,255,255,0.15) !important;
 }
+/* FIX: Chữ trên nút chức năng */
+div.stButton > button,
+div.stButton > button p {
+    color: #102640 !important;
+    font-weight: 700 !important;
+}
+
+/* FIX: Nhãn của các ô nhập */
+div[data-testid="stWidgetLabel"] p {
+    color: #D8E9F5 !important;
+}
 </style>
 """
