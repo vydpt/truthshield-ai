@@ -164,8 +164,13 @@ div.stButton > button p {
     font-weight: 700 !important;
 }
 
-/* FIX: Nhãn của các ô nhập */
-div[data-testid="stWidgetLabel"] p {
+/* FIX: Nhãn ô nhập trên Streamlit */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] *,
+[data-testid="stTextArea"] label,
+[data-testid="stTextArea"] label *,
+[data-testid="stTextInput"] label,
+[data-testid="stTextInput"] label * {
     color: #D8E9F5 !important;
 }
 </style>
