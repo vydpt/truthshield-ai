@@ -2,33 +2,75 @@
 import re
 import html
 
+
 SIGNALS = {
     "Giật gân": [
-        "chấn động", "sốc", "không thể tin nổi",
-        "sự thật kinh hoàng", "bí mật động trời"
+        "chấn động",
+        "sốc",
+        "không thể tin nổi",
+        "sự thật kinh hoàng",
+        "bí mật động trời",
+        "tin nóng",
+        "tin khẩn cấp",
+        "gây sốc",
+        "cả thế giới chấn động",
+        "không ai ngờ tới",
+        "sự thật bị che giấu",
+        "hé lộ bí mật",
+        "bạn sẽ không tin",
+        "động trời",
     ],
-    "Gây sợ hãi": [
-        "nguy hiểm chết người", "thảm họa",
-        "hoảng loạn", "tất cả sẽ chết"
-    ],
-    "Kích động cảm xúc": [
-        "phẫn nộ", "đáng căm ghét",
-        "không thể tha thứ", "tẩy chay ngay"
-    ],
-    "Thúc giục chia sẻ": [
-        "chia sẻ ngay", "lan truyền ngay",
-        "gửi cho tất cả mọi người",
-        "đừng để bị xóa", "chia sẻ trước khi quá muộn"
-    ]
-}
 
+    "Gây sợ hãi": [
+        "nguy hiểm chết người",
+        "thảm họa",
+        "hoảng loạn",
+        "tất cả sẽ chết",
+        "bạn sẽ gặp nguy hiểm",
+        "hậu quả khôn lường",
+        "đe dọa tính mạng",
+        "cực kỳ nguy hiểm",
+        "đáng sợ",
+        "nguy cơ tử vong",
+        "nếu không làm theo",
+        "trước khi quá muộn",
+    ],
+
+    "Kích động cảm xúc": [
+        "phẫn nộ",
+        "đáng căm ghét",
+        "không thể tha thứ",
+        "tẩy chay ngay",
+        "thật kinh tởm",
+        "không thể chấp nhận",
+        "quá bất công",
+        "đáng lên án",
+        "mọi người phải phản đối",
+        "đừng im lặng",
+    ],
+
+    "Thúc giục chia sẻ": [
+        "chia sẻ ngay",
+        "lan truyền ngay",
+        "gửi cho tất cả mọi người",
+        "đừng để bị xóa",
+        "chia sẻ trước khi quá muộn",
+        "gửi cho 10 người",
+        "gửi cho bạn bè",
+        "hãy chia sẻ",
+        "chia sẻ gấp",
+        "lan truyền thông tin này",
+        "mọi người phải chia sẻ",
+        "chuyển tiếp ngay",
+        "phát tán ngay",
+    ],
+}
 EXPLANATIONS = {
     "Giật gân": "Sử dụng từ ngữ gây chú ý mạnh, có thể khiến người đọc phản ứng vội vàng.",
     "Gây sợ hãi": "Có ngôn ngữ gợi cảm giác lo lắng hoặc hoảng sợ.",
     "Kích động cảm xúc": "Có cách diễn đạt dễ kích thích phản ứng cảm xúc mạnh.",
     "Thúc giục chia sẻ": "Có lời kêu gọi lan truyền thông tin nhanh chóng."
 }
-
 
 def analyze_text(text):
     detected = {}
