@@ -196,6 +196,20 @@ div[data-testid="stTextInput"] input::placeholder {
     opacity: 1 !important;
 }
 
+
+/* FIX: Màu chữ trong ô Bài viết A và B */
+div[data-testid="stTextArea"] textarea {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #22D3EE !important;
+}
+
+/* Màu chữ gợi ý khi chưa nhập */
+div[data-testid="stTextArea"] textarea::placeholder {
+    color: #AFC4D9 !important;
+    -webkit-text-fill-color: #AFC4D9 !important;
+}
+
 </style>
 """
 
