@@ -348,6 +348,24 @@ with tab_lab:
                 st.progress(result["score_b"] / 100)
 
             st.info(result["conclusion"])
+            st.markdown("### 🔬 COMPARISON MATRIX")
+            st.table(result["comparison_rows"])
+            st.caption("So sánh dấu hiệu ngôn ngữ, không xác minh tin thật hay giả.")
+            # TRUTH LAB 3.0 - BẢNG SO SÁNH CHI TIẾT
+            st.markdown("### 🔬 COMPARISON MATRIX")
+
+            st.write(
+                "Đối chiếu các dấu hiệu ngôn ngữ "
+                "được phát hiện trong hai bài viết."
+            )
+
+            st.table(result["comparison_rows"])
+
+            st.caption(
+                "Bảng sử dụng bộ dấu hiệu bổ sung. "
+                "Các dấu hiệu này chưa được cộng vào "
+                "điểm ngôn ngữ hiện tại."
+            )
 
             # TRUTH LAB 2.0 - DUAL SHIELD SCAN
             st.markdown("### 🛡️ DUAL SHIELD SCAN")

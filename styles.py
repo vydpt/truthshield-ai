@@ -132,13 +132,10 @@ CSS_NAV = """
 
 CSS_FIX = """
 <style>
-button[role="tab"],
-button[role="tab"] p,
-button[role="tab"] div,
-[data-testid="stTab"],
-[data-testid="stTab"] p {
-    color: #C7D6EA !important;
-}
+
+/* Các quy tắc CSS cũ của bạn giữ nguyên */
+
+
 
 button[role="tab"][aria-selected="true"],
 button[role="tab"][aria-selected="true"] p,
@@ -147,7 +144,6 @@ button[role="tab"][aria-selected="true"] div,
 [data-testid="stTab"][aria-selected="true"] p {
     color: #22D3EE !important;
 }
-
 [data-baseweb="tab-highlight"] {
     background-color: #22D3EE !important;
     background: #22D3EE !important;
@@ -157,10 +153,14 @@ button[role="tab"][aria-selected="true"] div,
     background-color: rgba(255,255,255,0.15) !important;
     background: rgba(255,255,255,0.15) !important;
 }
+
 /* FIX: Chữ trên nút chức năng */
-div.stButton > button,
-div.stButton > button p {
-    color: #102640 !important;
+div[data-testid="stButton"] button,
+div[data-testid="stButton"] button *,
+div.stButton button,
+div.stButton button * {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
@@ -173,5 +173,29 @@ div.stButton > button p {
 [data-testid="stTextInput"] label * {
     color: #D8E9F5 !important;
 }
+
+
+
+/* Các quy tắc CSS cũ của bạn giữ nguyên */
+
+/* FIX: Chữ bên trong ô nhập văn bản */
+div[data-testid="stTextArea"] textarea,
+div[data-testid="stTextArea"] textarea:focus,
+div[data-testid="stTextInput"] input,
+div[data-testid="stTextInput"] input:focus {
+    color: #102640 !important;
+    -webkit-text-fill-color: #102640 !important;
+    caret-color: #102640 !important;
+}
+
+/* FIX: Chữ gợi ý trong ô nhập */
+div[data-testid="stTextArea"] textarea::placeholder,
+div[data-testid="stTextInput"] input::placeholder {
+    color: #64748B !important;
+    -webkit-text-fill-color: #64748B !important;
+    opacity: 1 !important;
+}
+
 </style>
 """
+
