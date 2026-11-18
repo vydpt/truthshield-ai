@@ -348,11 +348,12 @@ with tab_lab:
                 st.progress(result["score_b"] / 100)
 
             st.info(result["conclusion"])
-            st.markdown("### 🔬 COMPARISON MATRIX")
+                        st.markdown("### 🔬 COMPARISON MATRIX")
+            st.write(
+                "Đối chiếu các dấu hiệu ngôn ngữ "
+                "được phát hiện trong hai bài viết."
+            )
             st.table(result["comparison_rows"])
-            st.caption("So sánh dấu hiệu ngôn ngữ, không xác minh tin thật hay giả.")
-            # TRUTH LAB 3.0 - BẢNG SO SÁNH CHI TIẾT
-            st.markdown("### 🔬 COMPARISON MATRIX")
 
             st.write(
                 "Đối chiếu các dấu hiệu ngôn ngữ "
