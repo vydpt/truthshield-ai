@@ -347,27 +347,17 @@ with tab_lab:
                 )
                 st.progress(result["score_b"] / 100)
 
+            
             st.info(result["conclusion"])
-                        st.markdown("### 🔬 COMPARISON MATRIX")
-            st.write(
-                "Đối chiếu các dấu hiệu ngôn ngữ "
-                "được phát hiện trong hai bài viết."
-            )
+
+            # TRUTH LAB 3.0 - COMPARISON MATRIX
+            st.markdown("### 🔬 COMPARISON MATRIX")
+            st.write("Đối chiếu dấu hiệu ngôn ngữ trong hai bài viết.")
             st.table(result["comparison_rows"])
-
-            st.write(
-                "Đối chiếu các dấu hiệu ngôn ngữ "
-                "được phát hiện trong hai bài viết."
-            )
-
-            st.table(result["comparison_rows"])
-
             st.caption(
-                "Bảng sử dụng bộ dấu hiệu bổ sung. "
-                "Các dấu hiệu này chưa được cộng vào "
-                "điểm ngôn ngữ hiện tại."
+                "Các dấu hiệu bổ sung chưa được tính vào điểm số. "
+                "Kết quả không xác minh tin thật hay giả."
             )
-
             # TRUTH LAB 2.0 - DUAL SHIELD SCAN
             st.markdown("### 🛡️ DUAL SHIELD SCAN")
 
